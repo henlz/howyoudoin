@@ -1,8 +1,11 @@
 from json import loads
 from random import choice
 
-def howyoudoin():
+def catchthemall():
     file = open("./cantadas.json", 'r')
     string = str(file.read())
     cantadas = loads(string)
-    print(choice(cantadas))
+    result = choice(cantadas)
+    return result
+
+catchthemall()
